@@ -1,0 +1,8 @@
+__pycache__/
+library/
+.idea/
+bart_lfqa/
+s2v_reddit_2015_md/
+t5-base/
+msmarco-distilbert-base-v3/
+*/*.bin
