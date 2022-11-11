@@ -10,6 +10,7 @@ if("text" not in st.session_state or st.session_state['text']==""):
 else:
     text = st.session_state['text']
     imp_keywords = get_keywords(text)
+    st.write(imp_keywords)
     question=[]
     for answer in imp_keywords:
         ques = get_question(text, answer,question_model, question_tokenizer)
@@ -17,7 +18,7 @@ else:
     answer=[]
     for ques in list(set(question)):
         ans=get_answer(text,ques)
-        if ans not in answer:
-            st.write(ques)
-            answer.append(ans)
-            st.success("       "+ans)
+        #if ans not in answer:
+        st.write(ques)
+        answer.append(ans)
+        st.success("       "+ans)

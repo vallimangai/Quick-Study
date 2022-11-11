@@ -30,8 +30,8 @@ with st.form("my_form"):
        tokenizer_lq = AutoTokenizer.from_pretrained(model_name)
        model_lf = AutoModelForSeq2SeqLM.from_pretrained(model_name)
        model_input = tokenizer_lq(query_and_docs, truncation=True, padding=True, return_tensors="pt")
-       generated_answers_encoded = model_lf.generate(input_ids=model_input["input_ids"].to(device),
-                                                  attention_mask=model_input["attention_mask"].to(device),
+       generated_answers_encoded = model_lf.generate(input_ids=model_input["input_ids"],
+                                                  attention_mask=model_input["attention_mask"],
                                                   min_length=64,
                                                   max_length=256,
                                                   do_sample=False,

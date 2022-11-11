@@ -120,7 +120,7 @@ def get_keywords(originaltext):
     # print("keywords_found in summarized: ", keywords_found)
 
     important_keywords = list(set(keywords))
-    print(list(set(important_keywords))[:4])
+    print(list(set(important_keywords)))
     return list(set(important_keywords))
 
 
