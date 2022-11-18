@@ -3,8 +3,8 @@ from transformers import T5ForConditionalGeneration, T5Tokenizer
 
 summary_model = T5ForConditionalGeneration.from_pretrained('t5-base')
 summary_tokenizer = T5Tokenizer.from_pretrained('t5-base')
-question_model = T5ForConditionalGeneration.from_pretrained('t5_squad_v1')
-question_tokenizer = T5Tokenizer.from_pretrained('t5_squad_v1')
+question_model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_squad_v1')
+question_tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_squad_v1')
 
 
 
@@ -151,7 +151,7 @@ def get_question(context, answer, model, tokenizer):
 
 from transformers import pipeline,AutoTokenizer, AutoModel, AutoModelForSeq2SeqLM
 def get_answer(text,question):
-    model_name = "bart_lfqa"
+    model_name = "vblagoje/bart_lfqa"
     query_and_docs = "question: {} context: {}".format(question, text)
     tokenizer_lq = AutoTokenizer.from_pretrained(model_name)
     model_lf = AutoModelForSeq2SeqLM.from_pretrained(model_name)

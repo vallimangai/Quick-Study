@@ -3,8 +3,8 @@ from transformers import T5ForConditionalGeneration, T5Tokenizer
 
 summary_model = T5ForConditionalGeneration.from_pretrained('t5-base')
 summary_tokenizer = T5Tokenizer.from_pretrained('t5-base')
-question_model = T5ForConditionalGeneration.from_pretrained('t5_squad_v1')
-question_tokenizer = T5Tokenizer.from_pretrained('t5_squad_v1')
+question_model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_squad_v1')
+question_tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_squad_v1')
 
 
 
@@ -36,7 +36,7 @@ def summarizer(text, model, tokenizer):
     # print (text)
     max_len = 512
     encoding = tokenizer.encode_plus(text, max_length=max_len, pad_to_max_length=False, truncation=True,
-                                     return_tensors="pt").to(device)
+                                     return_tensors="pt")
 
     input_ids, attention_mask = encoding["input_ids"], encoding["attention_mask"]
 
@@ -150,8 +150,8 @@ def get_question(context, answer, model, tokenizer):
     return Question
 
 from transformers import DistilBertTokenizerFast,DistilBertForQuestionAnswering
-tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-custom')
-model = DistilBertForQuestionAnswering.from_pretrained("distilbert-custom")
+tokenizer = DistilBertTokenizerFast.from_pretrained('Valli/distillbert_custom_answer')
+model = DistilBertForQuestionAnswering.from_pretrained("Valli/distillbert_custom_answer")
 from transformers import pipeline,AutoTokenizer, AutoModel, AutoModelForSeq2SeqLM
 qa=pipeline('question-answering',model=model,tokenizer=tokenizer)
 def get_answer(text,question):

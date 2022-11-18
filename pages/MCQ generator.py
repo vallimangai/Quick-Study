@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from final_mcq import *
 import random
-st.title("trying....")
+st.title("MCQ GENERATOR")
 if("text" not in st.session_state or st.session_state['text']==""):
     st.write("text" not in st.session_state )
     st.write("Please enter the text")
