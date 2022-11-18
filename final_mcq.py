@@ -163,8 +163,8 @@ def get_keywords(originaltext, summarytext):
 # In[7]:
 
 
-question_model = T5ForConditionalGeneration.from_pretrained('t5_squad_v1')
-question_tokenizer = T5Tokenizer.from_pretrained('t5_squad_v1')
+question_model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_squad_v1')
+question_tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_squad_v1')
 question_model = question_model.to(device)
 
 
@@ -341,20 +341,7 @@ def get_distractors(word, origsentence, sense2vecmodel, sentencemodel, top_n, la
     return final
 
 
-# In[13]:
 
-#
-# summarized_text = summarizer(text, summary_model, summary_tokenizer)
-# imp_keywords = get_keywords(text, summarized_text)
-# for answer in imp_keywords:
-#     ques = get_question(summarized_text, answer, question_model, question_tokenizer)
-#     print(ques)
-#     print(answer.capitalize())
-#     print("\n")
-#     print(get_distractors(answer, ques, s2v, sentence_transformer_model, 40, 0.2))
-#     print("\n\n")
-
-# In[ ]:
 
 
 
