@@ -29,6 +29,8 @@ Fast internet to download the model that is available in hugging face
 
 Tesseract <a href="https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.2.0.20220712.exe"> To download </a>
 
+
+
 ### How to run it
 
 #### Clone the repository to your local directory
@@ -52,3 +54,26 @@ pip install -r req.txt
 streamlit run "Quick Study.py"
 
 Now you can see our app running on http://localhost:8501/! Register with an account and try it out for yourself.
+
+### Outputs:
+#### uploading the image to get the text
+![image](https://user-images.githubusercontent.com/55653139/202740254-6638a13f-34cf-4232-85ee-7d68134ddc89.png)
+#### uploading the pdf to get the text
+![image](https://user-images.githubusercontent.com/55653139/202745150-d446cd4e-6c23-4846-9426-869b0237fcbd.png)
+#### summarisation
+![image](https://user-images.githubusercontent.com/55653139/202745246-c1da67f4-960d-485e-8b06-1403e020c419.png)
+#### Short answer for questions
+![image](https://user-images.githubusercontent.com/55653139/202745323-509264ca-302f-45a5-a944-03a94ca4d595.png)
+#### Long answer for questions
+![image](https://user-images.githubusercontent.com/55653139/202745381-5516064b-6a6d-4c23-b2e7-f3191d48286d.png)
+#### Long question and answer generations
+![image](https://user-images.githubusercontent.com/55653139/202745472-0d05ef82-79e1-43a8-8782-a0f458ab9750.png)
+![image](https://user-images.githubusercontent.com/55653139/202745588-1009d916-1281-4ad8-aa45-6874d7af4955.png)
+#### Short question and answer generations
+![image](https://user-images.githubusercontent.com/55653139/202745628-ed8afe27-8ed4-48e0-8da5-a37853080d79.png)
+![image](https://user-images.githubusercontent.com/55653139/202745661-dfcf3db4-4e37-4d88-82fd-af79942d9653.png)
+#### MCQ generation
+![image](https://user-images.githubusercontent.com/55653139/202745744-3836c062-64fd-47b4-b6d5-01c340979aa2.png)
+![image](https://user-images.githubusercontent.com/55653139/202745809-0a48710e-6600-4c8e-b5c4-2a3655d1e183.png)
+
+
